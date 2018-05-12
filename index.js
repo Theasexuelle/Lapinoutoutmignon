@@ -9,13 +9,11 @@ client.on('message', message => {
    if (message.content.toUpperCase() == 'BONJOUR'||message.content.toUpperCase() == 'COUCOU'  ||message.content.toUpperCase() == 'SALUT')
     {
       message.channel.send(message.content+' à vous ♥ !')
-      return;
     }
 
     if (message.content== "cismec")
     {
       message.channel.send('AU BUCHER'))
-      return;
     }
 
 });
