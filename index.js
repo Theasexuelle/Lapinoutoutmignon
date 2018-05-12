@@ -7,9 +7,9 @@ client.on('ready', () => {
 
 client.on('message', message => {
 
-    if (message.content== "cismec")
+    if (message.content === "cismec")
     {
-      message.channel.send('AU BUCHER'))
+      message.channel.send('AU BUCHER')
     }
 
 });
