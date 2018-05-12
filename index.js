@@ -5,9 +5,9 @@ client.on('ready', () => {
     console.log('I am ready!');
 });
 
-  if (message.content== "kokio")
+  if (message.content === "kokio?")
     {
-      message.channel.send("C'est une personne trop cute ♥")
+      message.channel.send("Lapinou aime Kokio ♥")
     }
 
 });
