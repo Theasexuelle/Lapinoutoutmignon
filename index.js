@@ -13,6 +13,7 @@ client.on('message', message => {
     if (message.content.search("cismec") > -1)
         message.content('Au Bûcher 🔥 🔥 🔥 ');
    
-    if (message.content.search("
+    if (message.content === "/hug")
+        
 });
 client.login(process.env.BOT_TOKEN);
