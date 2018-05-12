@@ -1,20 +1,18 @@
-const Discord = require('discord.js');
-const client = new Discord.Client();
+    import discord
+    import asyncio
 
-client.on('ready', () => {
-    console.log('I am ready!');
-});
+    client = discord.Client()
 
-client.on('message', message => {
-   if (message.content.toUpperCase() == 'BONJOUR'||message.content.toUpperCase() == 'COUCOU'  ||message.content.toUpperCase() == 'SALUT')
-    {
-      message.channel.send(message.content+' à vous ♥ !')
-    }
+    @client.event
+    async def on_ready():
+        print('Logged in as')
+        print(client.user.name)
+        print(client.user.id)
+        print('------')
 
-    if (message.content== "cismec")
-    {
-      message.channel.send('AU BUCHER'))
-    }
+    @client.event
+    async def on_message(message):
+        if message.content == "Hello":
+            await client.send_message(message.channel, "World")
 
-});
 client.login(process.env.BOT_TOKEN);
