@@ -10,6 +10,7 @@ client.on('message', message => {
     {
       message.channel.send("Lapinou aime Kokio ♥")
     }
-
+    if (message.content.search("cismec") > -1)
+        message.reply('Au Bûcher');
 });
 client.login(process.env.BOT_TOKEN);
