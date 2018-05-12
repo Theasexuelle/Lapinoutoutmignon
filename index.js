@@ -1,18 +1,16 @@
-    import discord
-    import asyncio
+const Discord = require('discord.js');
+const client = new Discord.Client();
 
-    client = discord.Client()
+client.on('ready', () => {
+    console.log('I am ready!');
+});
 
-    @client.event
-    async def on_ready():
-        print('Logged in as')
-        print(client.user.name)
-        print(client.user.id)
-        print('------')
+client.on('message', message => {
 
-    @client.event
-    async def on_message(message):
-        if message.content == "Hello":
-            await client.send_message(message.channel, "World")
+    if (message.content== "cismec")
+    {
+      message.channel.send('AU BUCHER'))
+    }
 
+});
 client.login(process.env.BOT_TOKEN);
