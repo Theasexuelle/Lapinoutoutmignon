@@ -5,11 +5,9 @@ client.on('ready', () => {
     console.log('I am ready!');
 });
 
-client.on('message', message => {
-
-    if (message.content === "cismec")
+  if (message.content== "kokio")
     {
-      message.channel.send('AU BUCHER')
+      message.channel.send("C'est une personne trop cute ♥")
     }
 
 });
