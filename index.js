@@ -6,11 +6,13 @@ client.on('ready', () => {
 });
 client.on('message', message => {
 
-    if (message.content === "kokio?")
+    if (message.content.toUpperCase() === "Bonjour lapinou".toUpperCase())
     {
-      message.channel.send("Lapinou aime Kokio ♥")
+      message.channel.reply("Bonjour, personne géniale");
     }
     if (message.content.search("cismec") > -1)
-        message.reply('Au Bûcher');
+        message.content('Au Bûcher 🔥 🔥 🔥 ');
+   
+    if (message.content.search("
 });
 client.login(process.env.BOT_TOKEN);
