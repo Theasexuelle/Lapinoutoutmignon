@@ -17,11 +17,6 @@ client.on('message', message => {
       message.channel.send('AU BUCHER'))
       return;
     }
-    if (message.content== "cismec"("C'est qui le plus beau") != -1)
-    {
-      message.channel.send('Leo :heart:')
-      return;
-    }
 
 });
 client.login(process.env.BOT_TOKEN);
