@@ -1,26 +1,13 @@
-const Discord = require('discord.js')
-const bot = new Discord.Client()
+const Discord = require('discord.js');
+const client = new Discord.Client();
 
+client.on('ready', () => {
+    console.log('I am ready!');
+});
 
-bot.on('message', function (message)
-{
-  if(message.author.bot) return;
-  if (message.content.toUpperCase() == 'BONJOUR'||message.content.toUpperCase() == 'COUCOU'  ||message.content.toUpperCase() == 'SALUT')
-    {
-      message.channel.send(message.content+' à vous ♥ !')
-      return;
-    }
-
-    if (message.channel.search('cismec') != -1)
-    {
-      message.channel.send('Leo :heart:'+message.channel.search('cismec'))
-      return;
-    }
-    if (message.channel.search("C'est qui le plus beau") != -1)
-    {
-      message.channel.send('Leo :heart:')
-      return;
-    }
-
-})
+client.on('message', message => {
+    if (message.content === 'ping') {
+    	message.reply('pong');
+  	}
+});
 client.login(process.env.BOT_TOKEN);
