@@ -11,7 +11,6 @@ bot.on('guildMemberAdd', member => {
     return channel.send('Bienvenue sur ce serveur ' + member.displayName)
   }).catch(console.error)
   // On pourrait catch l'erreur autrement ici (l'utilisateur a peut être désactivé les MP)
-})
 
 client.on('message', message => {
 
