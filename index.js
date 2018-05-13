@@ -5,6 +5,14 @@ client.on('ready', () => {
     console.log('I am ready!');
     client.user.setGame("Being cute");
 });
+
+bot.on('guildMemberAdd', member => {
+  member.createDM().then(channel => {
+    return channel.send('Bienvenue sur ce serveur ' + member.displayName)
+  }).catch(console.error)
+  // On pourrait catch l'erreur autrement ici (l'utilisateur a peut être désactivé les MP)
+})
+
 client.on('message', message => {
 
     if (message.content.toUpperCase() === "Bonjour lapinou".toUpperCase())
