@@ -13,10 +13,10 @@ client.on('message', message => {
     if (message.content.search("cismec") > -1)
         message.content('Au Bûcher 🔥 🔥 🔥 ');
    
-    if (message.content === "/hug")
+    if (message.content === "!hug")
     message.channel.send("Câlin", {files: ["https://78.media.tumblr.com/3b6ccf23ecd9aeacfcce0add1462c7c0/tumblr_msxqo58vDq1se3f24o1_500.gif"]});
 
-    if (message.content === "/hug" && message.content.members.lengh === 1 )
+    if (message.content === "!hug" && message.content.members.lengh === 1 )
         message.channel.send("Câlin"+message.mentions.members.first(), {files: ["https://78.media.tumblr.com/3b6ccf23ecd9aeacfcce0add1462c7c0/tumblr_msxqo58vDq1se3f24o1_500.gif"]});
 
 });
