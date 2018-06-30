@@ -3,8 +3,8 @@ const Discord = require('discord.js');
 const client = new Discord.Client({disableEveryone: true});
 
 client.on('ready', () => {
-    console.log(`${bot.user.username} est en ligne`);
-    bot.user.setGame("Fais la révolution");
+    console.log(`${client.user.username} est en ligne`);
+    client.user.setGame("Fais la révolution");
 });
 
 client.on('message', message => {
