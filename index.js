@@ -1,9 +1,27 @@
-const Discord = require('discord.js');
-const client = new Discord.Client();
+const botconfig = require("./botconfig.json");
+const Discord = require("discord.js");
+const bot = new Discord.Client({disableEveryone: true});
 
-client.on('ready', () => {
-    console.log('I am ready!');
-   // client.user.setGame("Headbang");
+bot.on("ready", async () => {
+console.log(`${bot.user.username} est en ligne`);
+bot.user.setGame("Fais la révolution");
+});
+
+bot.on("message", async message => {
+if(nessage.author.bot) return;
+if(message.channel.type === "dm") return;
+
+let prefix = botconfig.prefix;
+
+let messageArray = message.content.split(" ");
+let cmd = messageArray[0];
+let args = messageArray.slice(1);
+
+if(cmd === `${prefix}hello`){
+return message.channel.send("Hello!");
+
+}
+
 });
 
 /*bot.on('guildMemberAdd', member => {
@@ -12,7 +30,7 @@ client.on('ready', () => {
   }).catch(console.error)
   // On pourrait catch l'erreur autrement ici (l'utilisateur a peut être désactivé les MP)
 
-*/client.on('message', message => {
+client.on('message', message => {
 
     if (message.content.toUpperCase() === "Bonjour lapinou".toUpperCase())
     {
