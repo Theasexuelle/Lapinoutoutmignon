@@ -2,7 +2,7 @@ const botconfig = require('./botconfig.json');
 const Discord = require('discord.js');
 const client = new Discord.Client({disableEveryone: true});
 
-client.on('ready', async () => {
+client.on('ready', () => {
     console.log(`${bot.user.username} est en ligne`);
     bot.user.setGame("Fais la révolution");
 });
