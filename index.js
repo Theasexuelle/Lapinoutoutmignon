@@ -7,7 +7,7 @@ console.log(`${bot.user.username} est en ligne`);
 bot.user.setGame("Fais la révolution");
 });*/
 
-bot.on("message", async message => {
+/*bot.on("message", async message => {
 if(nessage.author.bot) return;
 if(message.channel.type === "dm") return;
 
