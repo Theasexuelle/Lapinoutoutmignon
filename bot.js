@@ -5,7 +5,7 @@ const client = new Discord.Client({disableEveryone: true});
 client.on('ready', () => {
     console.log(`${client.user.username} est en ligne`);
     client.user.setGame('Fais la révolution');
-    message.reply(`${client.user.username} est en ligne`);
+    message.message.send(`${client.user.username} est en ligne`);
 });
 
 client.on('message', message => {
