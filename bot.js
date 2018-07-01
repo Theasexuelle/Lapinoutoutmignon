@@ -4,7 +4,7 @@ const client = new Discord.Client(/*{disableEveryone: true}*/);
 
 client.on('ready', () => {
     console.log(`${client.user.username} est en ligne`);
-    client.user.setGame('Protecting from cismen')
+    client.user.setPresence({ game: { name: 'Protège', type: 0 } });
     .then(console.log)
     .catch(console.error);
 });
