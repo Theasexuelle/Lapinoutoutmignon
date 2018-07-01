@@ -4,7 +4,7 @@ const client = new Discord.Client(/*{disableEveryone: true}*/);
 
 client.on('ready', () => {
     console.log(`${client.user.username} est en ligne`);
-    client.user.setActivity('discord.js', { type: 'WATCHING' })
+    client.user.setGame('discord.js')
     .then(console.log)
     .catch(console.error);
 });
