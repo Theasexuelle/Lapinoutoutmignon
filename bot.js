@@ -4,7 +4,7 @@ const client = new Discord.Client(/*{disableEveryone: true}*/);
 
 client.on('ready', () => {
     console.log(`${client.user.username} est en ligne`);
-    client.user.setPresence({ game: { name: 'Protège', type: 0 } });
+    client.user.setPresence({ game: { name: 'Protège les Trans', type: 0 } });
 
 });
 
@@ -16,8 +16,8 @@ let messageArray = message.content.split(" ");
 let cmd = messageArray[0];
 let args = messageArray.slice(1);
 //    
-if(cmd === `${prefix}hello`){
-return message.channel.send("Hello!");
+if(cmd === `${prefix}Coucou`){
+return message.channel.send("Ptdr t ki?");
 }
 
 if(cmd === `${prefix}serverinfo`){ 
