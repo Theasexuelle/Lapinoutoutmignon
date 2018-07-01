@@ -28,6 +28,9 @@ message.channel.send("Tu es caca");
 if (cmd === `${prefix}spoon`){
     message.reply("Tiens, pleins de cuillères 🥄 🥄 🥄");
 }
+if (cmd === `${prefix}win`){
+message.channel.send("w.in");
+}
 if(cmd === `${prefix}serverinfo`){ 
 let sicon = message.guild.iconURL;
 let serverembed = new Discord.RichEmbed();
