@@ -8,10 +8,16 @@ client.on('ready', () => {
 
 });
 
-client.on('message', message => {
-    if (message.content === 'ping') {
-    	message.reply('pong');
-  	}
+client.on("message", async message => {
+if(nessage.author.bot) return;
+if(message.channel.type === "dm") return;
+let prefix = botconfig.prefix;
+let messageArray = message.content.split(" ");
+let cmd = messageArray[0];
+let args = messageArray.slice(1);
+if(cmd === `${prefix}hello`){
+return message.channel.send("Hello!");
+}
 });
 
 // THIS  MUST  BE  THIS  WAY
