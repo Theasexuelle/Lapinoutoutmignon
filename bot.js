@@ -30,7 +30,8 @@ serverembed.addField("Server Name", message.guild.name);
 serverembed.addField("Created On", message.guild.createdAt);
 serverembed.addField("You Joined", message.member.joinedAt);
 serverembed.addField("Total Members", message.guild.memberCount); 
-return message.channel.send({serverembed});
+return message.channel.sendEmbed(serverembed);
+//return message.channel.send({serverembed});
 }
 
 });
