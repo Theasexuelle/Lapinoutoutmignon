@@ -20,16 +20,16 @@ if(cmd === `${prefix}coucou`){
 return message.channel.send("Coucou toi ♥");
 }
 if (cmd === `${prefix}hug`){
-message.channel.send("Câlin", {files: ["https://78.media.tumblr.com/3b6ccf23ecd9aeacfcce0add1462c7c0/tumblr_msxqo58vDq1se3f24o1_500.gif"]});
+return message.channel.send("Câlin", {files: ["https://78.media.tumblr.com/3b6ccf23ecd9aeacfcce0add1462c7c0/tumblr_msxqo58vDq1se3f24o1_500.gif"]});
 }
 if (cmd === `${prefix}pengu`){
-message.channel.send("Tu es caca");
+return message.channel.send("Tu es caca");
 }
 if (cmd === `${prefix}spoon`){
-    message.reply("Tiens, pleins de cuillères 🥄 🥄 🥄");
+return message.reply("Tiens, pleins de cuillères 🥄 🥄 🥄");
 }
-if (cmd === `${prefix}win`){
-message.channel.send("w.in");
+if (cmd === `${prefix}avis`){
+return message.channel.send("c nul");
 }
 if(cmd === `${prefix}serverinfo`){ 
 let sicon = message.guild.iconURL;
