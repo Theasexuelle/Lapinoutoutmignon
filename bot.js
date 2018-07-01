@@ -16,10 +16,12 @@ let messageArray = message.content.split(" ");
 let cmd = messageArray[0];
 let args = messageArray.slice(1);
 //    
-if(cmd === `${prefix}Coucou`){
-return message.channel.send("Ptdr t ki?");
+if(cmd === `${prefix}coucou`){
+return message.channel.send("Coucou toi ♥");
 }
-
+if (cmd === `${prefix}hug`){
+message.channel.send("Câlin", {files: ["https://78.media.tumblr.com/3b6ccf23ecd9aeacfcce0add1462c7c0/tumblr_msxqo58vDq1se3f24o1_500.gif"]});
+}
 if(cmd === `${prefix}serverinfo`){ 
 let sicon = message.guild.iconURL;
 let serverembed = new Discord.RichEmbed();
