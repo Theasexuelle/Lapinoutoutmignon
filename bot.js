@@ -22,14 +22,15 @@ return message.channel.send("Coucou toi ♥");
 if (cmd === `${prefix}hug`){
 return message.channel.send("Câlin", {files: ["https://78.media.tumblr.com/3b6ccf23ecd9aeacfcce0add1462c7c0/tumblr_msxqo58vDq1se3f24o1_500.gif"]});
 }
+   
 if (cmd === `${prefix}pengu`){
 return message.channel.send("Tu es caca");
 }
 if (cmd === `${prefix}spoon`){
 return message.reply("Tiens, pleins de cuillères 🥄 🥄 🥄");
 }
-if (cmd === `${prefix}avis`){
-return message.channel.send("c nul");
+if (cmd === `${prefix}macron`){
+return message.channel.send("...", {files: ["https://i.gyazo.com/a7d6d93cb139ca012979766ff306ef89.jpg"]});
 }
 if(cmd === `${prefix}serverinfo`){ 
 let sicon = message.guild.iconURL;
