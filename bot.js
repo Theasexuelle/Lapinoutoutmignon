@@ -21,7 +21,7 @@ return message.channel.send("Hello!");
 }
 
 if(cmd === `${prefix}serverinfo`){ 
-let sicon = message.guild.displayAvatarURL;
+let sicon = message.guild.iconURL;
 let serverembed = new Discord.RichEmbed()
 .setDescription("Steven vous protège avec son armure")
 .setColor("#15f153") 
