@@ -4,8 +4,8 @@ const client = new Discord.Client(/*{disableEveryone: true}*/);
 
 client.on('ready', () => {
     console.log(`${client.user.username} est en ligne`);
-    client.user.setActivity('YouTube', { type: 'WATCHING' })
-  .then(presence => console.log(`Activity set to ${presence.game ? presence.game.name : 'none'}`))
+    client.user.setPresence({ activity: { name: 'with discord.js' }, status: 'idle' })
+  .then(console.log)
   .catch(console.error);
 });
 
