@@ -60,7 +60,7 @@ if(cmd === `${prefix}hello`){
 return message.channel.send("Hello!");
 
 }
-
+//
 });
 
 /*bot.on('guildMemberAdd', member => {
