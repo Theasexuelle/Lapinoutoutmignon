@@ -4,7 +4,7 @@ const client = new Discord.Client(/*{disableEveryone: true}*/);
 
 client.on('ready', () => {
     console.log(`${client.user.username} est en ligne`);
-    client.user.setPresence({ activity: { name: 'with discord.js' }, status: 'idle' })
+    client.user.setPresence({ activity: { name: 'with discord.js' }, game: Overwatch, afk: false, since: 0 })
   .then(console.log)
   .catch(console.error);
 });
