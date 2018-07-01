@@ -15,9 +15,24 @@ let prefix = botconfig.prefix;
 let messageArray = message.content.split(" ");
 let cmd = messageArray[0];
 let args = messageArray.slice(1);
+//    
 if(cmd === `${prefix}hello`){
 return message.channel.send("Hello!");
 }
+
+if(cmd === `${prefix}serverinfo`){ 
+let sicon = message.guild.displayAvatarURL;
+let serverembed = new Discord.RichEmbed()
+.setDescription("Steven vous protège avec son armure")
+.setColor("#15f153") 
+.setThumbnail(sicon)
+.addField("Server Name", message.guild.name)
+.addField("Created On", message.guild.createdAt)
+.addField("You Joined", message.member.joinedAt)
+.addField("Total Members", message.guild.memberCount); 
+return message.channel.send(serverembed) 
+}); 
+
 });
 
 // THIS  MUST  BE  THIS  WAY
