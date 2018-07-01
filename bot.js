@@ -30,7 +30,7 @@ let serverembed = new Discord.RichEmbed()
 .addField("Created On", message.guild.createdAt)
 .addField("You Joined", message.member.joinedAt)
 .addField("Total Members", message.guild.memberCount); 
-return message.channel.send(serverembed);
+return message.channel.send({serverembed});
 }
 
 });
