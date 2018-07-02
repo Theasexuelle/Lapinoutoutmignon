@@ -1,7 +1,7 @@
 const botconfig = require('./botconfig.json');
 const Discord = require('discord.js');
 const client = new Discord.Client(/*{disableEveryone: true}*/);
-
+let coins = require("./coins.json");
 client.on('ready', () => {
     console.log(`${client.user.username} est en ligne`);
     client.user.setPresence({ game: { name: 'Protège les Trans', type: 0 } });
@@ -16,6 +16,32 @@ let messageArray = message.content.split(" ");
 let cmd = messageArray[0];
 let args = messageArray.slice(1);
 //    
+    
+if(!coins[message.author.id]){
+    coins[message.author.id] = {
+      coins: 0
+    };
+  }
+
+  let coinAmt = Math.floor(Math.random() * 15) + 1;
+  let baseAmt = Math.floor(Math.random() * 15) + 1;
+  console.log(`${coinAmt} ; ${baseAmt}`);
+
+  if(coinAmt === baseAmt){
+    coins[message.author.id] = {
+      coins: coins[message.author.id].coins + coinAmt
+    };
+  fs.writeFile("./coins.json", JSON.stringify(coins), (err) => {
+    if (err) console.log(err)
+  });
+  let coinEmbed = new Discord.RichEmbed()
+  .setAuthor(message.author.username)
+  .setColor("#0000FF")
+  .addField("💸", `${coinAmt} coins added!`);
+
+  message.channel.send(coinEmbed).then(msg => {msg.delete(5000)});
+  }    
+
 if(cmd === `${prefix}coucou`){
 return message.channel.send("Coucou toi ♥");
 }
