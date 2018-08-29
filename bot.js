@@ -4,7 +4,7 @@ const client = new Discord.Client(/*{disableEveryone: true}*/);
 let coins = require("./coins.json");
 client.on('ready', () => {
     console.log(`${client.user.username} est en ligne`);
-    client.user.setPresence({ game: { name: 'Protège les Trans', type: 0 } });
+    client.user.setPresence({ game: { name: 'Sniping terfs', type: 0 } });
 
 });
 
