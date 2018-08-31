@@ -50,7 +50,7 @@ return message.channel.send("Câlin", {files: ["https://78.media.tumblr.com/3b6c
 }
    
 if (cmd === `${prefix}test`){
-return message.channel.send("${message.content.toString();}");
+return message.channel.send(`${message.content.toString();}`);
 }
 if (cmd === `${prefix}spoon`){
 return message.reply("Tiens, pleins de cuillères 🥄 🥄 🥄");
